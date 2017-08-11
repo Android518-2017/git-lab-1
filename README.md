@@ -4,8 +4,13 @@ from other SCM (source code management) systems in that there is a
 staging area before committing where you add / remove items to be
 committed before the actual commit. git is the command for use on your
 local repository on your own computer. For windoze we recommend
-<https://git-for-windows.github.io/> For Linux (possible MAC OSX) it
+<https://git-for-windows.github.io/> For Linux (possibly MAC OSX) it
 should be installed by default.
+
+This lab should get you started using git for a project of your own,
+so if anything goes wrong you swear at yourself.
+
+The second lab will concentrate on collaboration using git.
 
 This repo is a set of instructions, not a standard repo. It is hosted
 here as we are teaching the use of git local & remote.
