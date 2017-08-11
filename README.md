@@ -1,0 +1,2 @@
+The idea behind git is that you maintain a repository locally. If you wish you can synchronize with a remote repository server. It differs from other SCM (source code management) systems in that there is a staging area before committing where you add / remove items to be committed before the actual commit.
+git is the command for use on your local repository on your own computer. For windoze we recommend https://git-for-windows.github.io/
