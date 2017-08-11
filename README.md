@@ -3,7 +3,7 @@ git is the command for use on your local repository on your own computer. For wi
 
 This repo is a set of instructions, not a standard repo.  It is hosted here as we are teaching the use of git local & remote.
 
-[Start the lab here](master/Labtext1.md)
+[Start the lab here](Labtext1.md)
 
 For working on this repo:
 * [markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
