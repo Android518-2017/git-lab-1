@@ -22,6 +22,6 @@ For working on this repo:
 -   [markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 -   [original main on mediawiki](http://wiki.pcampbell.profweb.ca/index.php/Using\_git)
 -   [original lab 1 on mediawiki](http://wiki.pcampbell.profweb.ca/index.php/Introductory\_Git\_Lab)
--   [differencese between github/gitlab/bitbucket](https://about.gitlab.com/2016/01/27/comparing-terms-gitlab-github-bitbucket/)
+-   [differences between github/gitlab/bitbucket](https://about.gitlab.com/2016/01/27/comparing-terms-gitlab-github-bitbucket/)
 
 ![xkcd on git](https://imgs.xkcd.com/comics/git_2x.png)
