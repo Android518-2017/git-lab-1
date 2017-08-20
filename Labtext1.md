@@ -1,28 +1,40 @@
-git is a client-server version control system created in 2005 by Linus
-Torvalds.
+# Git Tutorial, Part 1
 
-It keeps track for project history in terms of "revisions", also knowns as
+Summary: create a local repository, make commits, set up a remote repository,
+push to and pull from the remote.
+
+Commands shown: `git init`, `git status`, `git add`, `git commit`, `git diff`,
+`git log`, `git clone`, `git remote`, `git push`, `git pull`
+
+## What is git?
+
+git is a client-server version control system created in 2005 by Linus
+Torvalds. 
+
+* It keeps track for project history in terms of "revisions", also knowns as
 "commits". Every time you want to save a snapshot of your repository files
 in history, you use git to create a commit.  
+* This allows you (and teammates) to work on different aspects of a big project
+at the same time, without stepping on each other's toes. 
 
 The client is the git command the server is any repo server
 <http://github.com>, <https://bitbucket.org/>, <http://gitlab.com>, or
 one that you host yourself, etc.
-
+met
 The examples in here use github but could easily be swapped for
 bitbucket or gitlab.
 
-If you already know how to use git but can't remember some sequence
+### Resources
+
+* If you already know how to use git but can't remember some sequence
 check here [git quick ref](git_quick_ref "wikilink") 
-
-
-This is all command line. If you re having trouble remembering the bash
+* This is all command line. If you re having trouble remembering the bash
 command line here are some
 [references](https://drive.google.com/open?id=0B-CHlg81QPjfVU5PSkxYM1hsSEE)
 <http://bit.ly/bashqr>
 
-Definitions: "local" versus "remote"
------------------------
+## Definitions: "local" versus "remote"
+
 
 * A __local__ repo is one that is on your computer. It is possible to use git
 only locally, and never even communicate with a server. In that case, you get
@@ -34,8 +46,8 @@ on the server and therefore access them any other computer. This also allows
 you to share your repo with other and collaborate.
 
 
-Set up a local repo
---------------------
+## Set up a local repo
+
 
 1. Configure your git client side (the repo will exist first locally then
 also remotely).
@@ -81,9 +93,12 @@ $  git init .
 Initialized empty Git repository in planets/.git/
 ```
 
-A git repo is just a directory that contains a `.git` directory. The `.git`
-directory is where `git` keeps track of all the file history and other
-meta-data of the files in `planets`.
+A git repo is just a directory that contains a `.git` directory as well as
+whatever files you want to keep track of. 
+
+The `.git` directory is where `git` keeps track of all the file history and other
+meta-data of the files in `planets`. You pretty much never have to do anything
+_in_ the `.git` directory: that's what git commands do for you.
 
 ```
 $ ls -a   
@@ -99,8 +114,12 @@ $ git status
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
-Create a file in the planets directory from
-<http://swcarpentry.github.io/git-novice/04-changes/>
+_Use `git status` often: it often gives you hints about how to fix mistakes._
+
+## Add files to the repo
+
+Create a file in the planets directory (Reference:
+<http://swcarpentry.github.io/git-novice/04-changes/>)
 
 ``` {.bash}
 $ vi pluto.txt   #  put some text in here "alas it is no more"  & save it
@@ -140,12 +159,25 @@ $ git status
 #
 ```
 
+### Possible status of files in a git repo
+
+> `untracked`:
+> Files that aren't tracked by Git yet. This usually indicates a newly created file.
+>
+> `staged` (in the index):
+> The result of git add: tracked files that are ready to be committed. 
+>
+> `unstaged` (not in the index):
+> Tracked files with changes that have not been "git-added".
+
+
 You can see the staged changes as follows:
 
 ```{.bash}
 git diff --staged
 ```
 
+## Commits
 
 Tell git save a snapshot of file history by recording the changes that you
 added to the index.
@@ -155,9 +187,8 @@ $ git commit -m "Create first planet file."
 ```
 
 The message "Create first planet file" describes the changes made by that
-commit. It is a widely adopted practice to start commit messages with a 
-imperative verb, so that each message sounds like a command or a step in an
-algorithm: "List all passengers by name.", "Remove multiplication method."
+commit. 
+
 
 ``` {.bash}
 [master (root-commit) f22b25e] Create first planet file.
@@ -190,6 +221,11 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
     Create first planet file.
 ```
 
+It is a widely adopted practice to start commit messages with a 
+imperative verb, so that each message sounds like a command or a step in an
+algorithm: "List all passengers by name.", "Remove multiplication method."
+This makes the history easier to read when use `git log` and other tools.
+
 modify the file
 
 ``` {.bash}
@@ -208,7 +244,7 @@ $ git status
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-review the changes before saving them, git knows that it doesn't match
+Look at the changes before saving them; git detects that it doesn't match
 what is in the first commit
 
 ``` {.bash}
@@ -253,7 +289,7 @@ NOPE!
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-We need to add it to the index before committing: add then commit
+We need to add it to the index (staging area) before committing: __add then commit__
 
 ``` {.bash}
 $ git add pluto.txt
@@ -273,8 +309,8 @@ So getting files into a repo is a 2 part process: untracked changes
 ![](git-staging-area.jpg "git-staging-area.jpg")
 
 
-Set up a server side repo (remote)
-----------------------------------
+## Set up a server side repo (a remote repo)
+
 
 For this exercise we are going to use github which has only public repos
 for free, for private repos create a bitbucket account.
