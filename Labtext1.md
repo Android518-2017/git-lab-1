@@ -9,13 +9,13 @@ Commands shown: `git init`, `git status`, `git add`, `git commit`, `git diff`,
 ## What is git?
 
 git is a client-server version control system created in 2005 by Linus
-Torvalds. 
+Torvalds.
 
 * It keeps track for project history in terms of "revisions", also knowns as
 "commits". Every time you want to save a snapshot of your repository files
 in history, you use git to create a commit.  
 * This allows you (and teammates) to work on different aspects of a big project
-at the same time, without stepping on each other's toes. 
+at the same time, without stepping on each other's toes.
 
 The client is the git command the server is any repo server
 <http://github.com>, <https://bitbucket.org/>, <http://gitlab.com>, or
@@ -27,7 +27,7 @@ bitbucket or gitlab.
 ### Resources
 
 * If you already know how to use git but can't remember some sequence
-check here [git quick ref](git_quick_ref "wikilink") 
+check here [git quick ref](git_quick_ref "wikilink")
 * This is all command line. If you re having trouble remembering the bash
 command line here are some
 [references](https://drive.google.com/open?id=0B-CHlg81QPjfVU5PSkxYM1hsSEE)
@@ -38,7 +38,7 @@ command line here are some
 
 * A __local__ repo is one that is on your computer. It is possible to use git
 only locally, and never even communicate with a server. In that case, you get
-the benefit of version control and history for yourself, but you can't 
+the benefit of version control and history for yourself, but you can't
 collaborate with anyone.
 * A __remote__ repo is one that is hosted on a server like gitlab.com. By pushing
 a copy of your local repo to a remote repo, you get a back-up of your files
@@ -53,7 +53,7 @@ you to share your repo with other and collaborate.
 also remotely).
 
 2. Open a git-bash command line window & configure your client. (In the labs
-this will configure the git client info in the H: drive.) 
+this will configure the git client info in the H: drive.)
 If you are
 running on Linux just make sure git is installed.
 
@@ -74,8 +74,8 @@ $ git config --list
 To get help
 
 ``` {.bash}
-$ git config -h 
-$ git config --help 
+$ git config -h
+$ git config --help
 ```
 
 We are going to make an example local repository. Do this on
@@ -94,7 +94,7 @@ Initialized empty Git repository in planets/.git/
 ```
 
 A git repo is just a directory that contains a `.git` directory as well as
-whatever files you want to keep track of. 
+whatever files you want to keep track of.
 
 The `.git` directory is where `git` keeps track of all the file history and other
 meta-data of the files in `planets`. You pretty much never have to do anything
@@ -123,7 +123,7 @@ Create a file in the planets directory (Reference:
 
 ``` {.bash}
 $ vi pluto.txt   #  put some text in here "alas it is no more"  & save it
-$ git status 
+$ git status
 ```
 
 ``` {.bash}
@@ -165,7 +165,7 @@ $ git status
 > Files that aren't tracked by Git yet. This usually indicates a newly created file.
 >
 > `staged` (in the index):
-> The result of git add: tracked files that are ready to be committed. 
+> The result of git add: tracked files that are ready to be committed.
 >
 > `unstaged` (not in the index):
 > Tracked files with changes that have not been "git-added".
@@ -187,7 +187,7 @@ $ git commit -m "Create first planet file."
 ```
 
 The message "Create first planet file" describes the changes made by that
-commit. 
+commit.
 
 
 ``` {.bash}
@@ -221,7 +221,7 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
     Create first planet file.
 ```
 
-It is a widely adopted practice to start commit messages with a 
+It is a widely adopted practice to start commit messages with a
 imperative verb, so that each message sounds like a command or a step in an
 algorithm: "List all passengers by name.", "Remove multiplication method."
 This makes the history easier to read when use `git log` and other tools.
@@ -230,7 +230,7 @@ modify the file
 
 ``` {.bash}
 $ vi pluto.txt   #  add a new line of text "we miss you pluto"  & save it
-$ git status 
+$ git status
 ```
 
 ``` {.bash}
@@ -259,7 +259,7 @@ index 9f83956..0ce4e22 100644
 --- a/pluto.txt
 +++ b/pluto.txt
 @@ -1 +1,2 @@
- alas it is no more 
+ alas it is no more
 +we miss you pluto
 ```
 
@@ -276,7 +276,7 @@ no changes added to commit
 $ git status
 ```
 
-NOPE! 
+NOPE!
 
 ``` {.bash}
 # On branch master
@@ -312,25 +312,24 @@ So getting files into a repo is a 2 part process: untracked changes
 ## Set up a server side repo (a remote repo)
 
 
-For this exercise we are going to use github which has only public repos
-for free, for private repos create a bitbucket account.
+For this exercise we are going to use gitlab.
 
-1.  If you don't have a github account create one
-    <https://github.com/join?source=header-home>
-2.  Once you have created your account logon, to create a new repo click
-    on the plus sign:\
-    ![](Create-repo-github.png "fig:Create-repo-github.png")\
-    \
+1.  If you don't have a gitlab account create one
+    <https://gitlab.com/users/sign_in>
+2.  Once you have created your account logon, to create a new Project repo click
+    on Project Dashboard then New project button:
+    ![](gitlab-add-project.PNG "fig:gitlab-add-project.PNG")
 3.  Select new repository then fill in the info & click on the green
-    button (Do NOT create a README):\
-    ![](Create-repo-github2.png "fig:Create-repo-github2.png")
-4.  If the repo is created properly you will see this;\
-    ![](Create-repo-github3.png "fig:Create-repo-github3.png")
+    button:
+    ![](gitlab-add-project2.PNG "fig:gitlab-add-project2.PNG")
+4.  If the repo is created properly you will see this;
+     (Do NOT create a README nor any other files)
+    ![](gitlab-add-project3.PNG "fig:gitlab-add-project3.PNG")
     -   After the first part you had a local repo called planets, now
-        you have an empty repo called planets on the github server\
-        effectively you just did this on github:
+        you have an empty repo called planets on the github server
+        effectively you just did this on gitlab:
         ``` {.bash}
-        mkdir planets;cd planets;git init . 
+        mkdir planets;cd planets;git init .
         ```
 
 Connect your local repo to your remote repo
@@ -345,58 +344,60 @@ userid/password. So we'll use https for now.
 
 Note server side == remote && client side == local
 
-Copy the https url into your clipboard\
-![](Create-repo-github4.png "fig:Create-repo-github4.png")
+From the website copy the https url into your clipboard
+![](gitlab-add-project4.PNG "fig:gitlab-add-project4.PNG")
 
 Go to your local repo directory (git-bash command line)
 
+Below shows my repo URL, use your own
 ``` {.bash}
-# go into repository
+# go into repository directory (you already did a git init here)
 $ cd planets
 
 # add a remote with name "origin" and url github.com..
-$ git remote add origin https://github.com/campbe13/planets.git
+$ git remote add origin https://gitlab.com/campbe13/lab1-using-git.git
 
 # verify it
-$ git remote -v 
-origin  https://github.com/campbe13/planets.git (fetch)
-origin  https://github.com/campbe13/planets.git (push)
+$ git remote -v
+origin  https://gitlab.com/campbe13/lab1-using-git.git (fetch)
+origin  https://gitlab.com/campbe13/lab1-using-git.git (push)
 ```
 
 "origin" is a standard name for the primary remote used by your local repo.
 We could have used any string for this label.
 
 Now that the local (client) repo knows about the remote (server) repo, let's
-sync them. You remote repo on github is empty, so let's send your history
+sync them. You remote repo on gitlab is empty, so let's send your history
 from the local repo to the remote repo.
 
 `git push` is the command for sending data to a remote. Below, we know
 "origin" represent the URL to planets.git on github.com. We'll explain
 what "master" is next time, but for now you can think of "master" as a label
-the most recent commit you made. 
+the most recent commit you made.
+
+Note we have previously added and committed the files in the staging area.
 
 ``` {.bash}
 $ git push origin master
 ```
 
-So this command is saying: take all the commits in history up to the point 
+So this command is saying: take all the commits in history up to the point
 labeled "master" and send them to the remote called "origin"
 
-
+We need to authenticate on the server:
+![](http-auth-windows.PNG "fig:http-auth-windows.PNG")
 ``` {.bash}
-Username for 'https://github.com': campbe13
-Password for 'https://campbe13@github.com': 
-Counting objects: 6, done.
+Counting objects: 3, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
-Writing objects: 100% (6/6), 510 bytes | 0 bytes/s, done.
-Total 6 (delta 0), reused 0 (delta 0)
-To https://github.com/campbe13/planets.git
+Writing objects: 100% (3/3), 214 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://gitlab.com/campbe13/lab1-using-git.git
  * [new branch]      master -> master
 ```
 
 Now the contents of the local repo are on the remote, reload the page:\
-![](Create-repo-github5.png "fig:Create-repo-github5.png")
+![](gitlab-add-project5.PNG "fig:gitlab-add-project5.PNG")
 
 Add a README.md, for now just put in some basic text, you can get more
 sophisticated later, with markdown
@@ -406,15 +407,13 @@ You can use this method to add any files to your own repos.
 
 ``` {.bash}
 tricia@ubbie:~/planets$ echo "My first repo" > README.md
-tricia@ubbie:~/planets$ git add README.md 
+tricia@ubbie:~/planets$ git add README.md
 tricia@ubbie:~/planets$ git commit -m "add readme"
 [master ef2c0b8] add readme
  1 file changed, 1 insertion(+)
 
  create mode 100644 README.md
 tricia@ubbie:~/planets$ git push origin master
-Username for 'https://github.com': campbe13
-Password for 'https://campbe13@github.com': 
 Counting objects: 3, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
@@ -431,7 +430,7 @@ Using your repo from a new computer
 
 *You can do this part from home or from your laptop.*
 
-Again this example uses github but any remote server repo will work
+Again this example uses gitlab but any remote server repo will work
 similarly.
 
 This is for anywhere you are using a new computer or want to use a clean
@@ -452,7 +451,7 @@ set up a remote called "origin" for you, so you don't have to do it manually
 this time.
 
 ``` {.bash}
-$ git clone https://github.com/campbe13/planets.git 
+$ git clone https://github.com/campbe13/planets.git
 Cloning into 'planets'...
 remote: Counting objects: 9, done.
 remote: Compressing objects: 100% (4/4), done.
@@ -474,7 +473,7 @@ and on your second computer (or wherever you cloned just now).
 modify some files, and/or create new ones, work with the directory I
 added home-planet.txt and changed README.md
 
-This only changes the local files! It does not affect anything on the other 
+This only changes the local files! It does not affect anything on the other
 copies of this repo (remote, or other local.)
 
 ``` {.bash}
@@ -484,7 +483,7 @@ total 12
 -rw-rw-r-- 1 tricia tricia 32 Aug 28 19:54 home-planet.txt
 -rw-rw-r-- 1 tricia tricia 38 Aug 28 19:51 pluto.txt
 -rw-rw-r-- 1 tricia tricia 14 Aug 28 19:51 README.md
-$ vi README.md 
+$ vi README.md
 $ git diff
 diff --git a/README.md b/README.md
 index b85b88f..cc8bdcd 100644
@@ -505,7 +504,7 @@ Changes to be committed:
     new file:   home-planet.txt
 ```
 
-remember `add` will update the staging area (the index), `commit` will save 
+remember `add` will update the staging area (the index), `commit` will save
 history in the local repo
 
 ``` {.bash}
@@ -516,12 +515,12 @@ $ git commit -m "done for today will work from school tomorrow"
 ```
 
 If I want to use it from school tomorrow I need to push these changes to
-the remote repo. 
+the remote repo.
 
 ``` {.bash}
 $ git push origin master
 Username for 'https://github.com': campbe13
-Password for 'https://campbe13@github.com': 
+Password for 'https://campbe13@github.com':
 Counting objects: 4, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (3/3), done.
@@ -536,18 +535,18 @@ Now the remote (server) github repo contains my latest changes.
 Using your repo back on first computer
 --------------------------------------
 
-So you committed a change in the repo at home, pushed to your remote, and now 
+So you committed a change in the repo at home, pushed to your remote, and now
 you want to work on the repo in the school lab again. Your home and remote
-repo are up-to-date, but your lab repo is not. How do you get the 
-changes you made at home? 
+repo are up-to-date, but your lab repo is not. How do you get the
+changes you made at home?
 
-Before you make any new changes in your local lab repo, make sure you update it 
+Before you make any new changes in your local lab repo, make sure you update it
 with any changes from the remote (github) with `git pull`.
 
 ``` {.bash}
-$ ls 
+$ ls
 pluto.txt  README.md
-$ git pull origin master 
+$ git pull origin master
 From https://github.com/campbe13/planets
  * branch            master     -> FETCH_HEAD
 Updating ef2c0b8..c3993b1
@@ -592,7 +591,7 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-So I need to add the new file (stage), then commit them (save history in local 
+So I need to add the new file (stage), then commit them (save history in local
 repo)
 
 ``` {.bash}
@@ -613,7 +612,7 @@ Then I need to keep the remote (github) up to date
 ``` {.bash}
 $ git push origin master
 Username for 'https://github.com': campbe13
-Password for 'https://campbe13@github.com': 
+Password for 'https://campbe13@github.com':
 Counting objects: 4, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (3/3), done.
@@ -645,13 +644,13 @@ For example:
 Mila, logged on at Dawson:
 
 ``` {.bash}
- h:\git\planets 
+ h:\git\planets
 ```
 
 Tom, logged on at Dawson:
 
 ``` {.bash}
- h:\git\planets 
+ h:\git\planets
 ```
 
 Mila sharing Tom's
