@@ -425,8 +425,7 @@ To https://github.com/campbe13/planets.git
 
 Reload the page it will show you the README.md
 
-Using your repo from a new computer
------------------------------------
+##  Using your repo from a new computer
 
 *You can do this part from home or from your laptop.*
 
@@ -467,8 +466,10 @@ total 8
 ```
 
 
-So now there are 3 identical copies of this repository: on your h: drive, on github,
-and on your second computer (or wherever you cloned just now).
+So now there are 3 identical copies of this repository:
+1. on your h: drive
+2. on gitlab
+3. on your home computer (or wherever you cloned just now).
 
 modify some files, and/or create new ones, work with the directory I
 added home-planet.txt and changed README.md
@@ -519,8 +520,7 @@ the remote repo.
 
 ``` {.bash}
 $ git push origin master
-Username for 'https://github.com': campbe13
-Password for 'https://campbe13@github.com':
+...
 Counting objects: 4, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (3/3), done.
@@ -530,10 +530,10 @@ To https://github.com/campbe13/planets.git
    ef2c0b8..c3993b1  master -> master
 ```
 
-Now the remote (server) github repo contains my latest changes.
+Now the remote (server) gitlab repo contains my latest changes.
 
-Using your repo back on first computer
---------------------------------------
+Using your repo back on first computer (in the lab)
+---------------------------------------------------
 
 So you committed a change in the repo at home, pushed to your remote, and now
 you want to work on the repo in the school lab again. Your home and remote
@@ -541,13 +541,13 @@ repo are up-to-date, but your lab repo is not. How do you get the
 changes you made at home?
 
 Before you make any new changes in your local lab repo, make sure you update it
-with any changes from the remote (github) with `git pull`.
+with any changes from the remote (gitlab) with `git pull`.
 
 ``` {.bash}
 $ ls
 pluto.txt  README.md
 $ git pull origin master
-From https://github.com/campbe13/planets
+From https://gitlab.com/campbe13/planets
  * branch            master     -> FETCH_HEAD
 Updating ef2c0b8..c3993b1
 Fast-forward
@@ -557,7 +557,7 @@ Fast-forward
  create mode 100644 home-planet.txt
 ```
 
-Now your local repo matches the remote (gitub) you can work on this,
+Now your local repo matches the remote (gitlab) you can work on this,
 don't forget to update the remote again as needed & when you are
 finished.
 
@@ -607,25 +607,23 @@ Your branch is ahead of 'origin/master' by 1 commit.
 nothing to commit, working directory clean
 ```
 
-Then I need to keep the remote (github) up to date
+Then I need to keep the remote (gitlab) up to date
 
 ``` {.bash}
 $ git push origin master
-Username for 'https://github.com': campbe13
-Password for 'https://campbe13@github.com':
+...
 Counting objects: 4, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (3/3), done.
 Writing objects: 100% (4/4), 440 bytes | 0 bytes/s, done.
 Total 4 (delta 0), reused 0 (delta 0)
-To https://github.com/campbe13/planets.git
+To https://gitlab.com/campbe13/planets.git
    c3993b1..f843520  master -> master
 ```
 
-Collaborate using a git repo
-----------------------------
+##  Simple Collaboration using a git repo
 
-Again this example uses github but any remote server repo will work
+Again this example uses gitlab but any remote server repo will work
 similarly. This is collaboration where both contributors have access.
 
 This is the shared repository model: collaborators have push access to a
@@ -634,7 +632,7 @@ shared repo.
 Do this with a partner, each of you act as owner and collaborator, do it
 twice, so that you each contribute to your partner's repo, also create a
 file that is <yourname>.txt:
-<http://swcarpentry.github.io/git-novice/08-collab/>
+Ref <http://swcarpentry.github.io/git-novice/08-collab/>
 
 Note when you do this if you are each using a repo with the same name
 you must do it in a separate directory, do not cross the streams!!!!!
@@ -664,5 +662,5 @@ Tom sharing Mila's
 
 ``` {.bash}
 cd h:\sharedstuff\  
-git clone <Sam's url> # creates h:\sharedstuff\planets
+git clone <Mila's url> # creates h:\sharedstuff\planets
 ```
