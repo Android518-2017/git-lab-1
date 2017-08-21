@@ -21,8 +21,8 @@ The client is the git command the server is any repo server
 <http://github.com>, <https://bitbucket.org/>, <http://gitlab.com>, or
 one that you host yourself, etc.
 met
-The examples in here use github but could easily be swapped for
-bitbucket or gitlab.
+The examples in here use gitlab but could easily be swapped for
+github or bitbucket.
 
 ### Resources
 
