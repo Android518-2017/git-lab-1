@@ -303,10 +303,10 @@ Success!
  1 file changed, 1 insertion(+)
 ```
 
-So getting files into a repo is a 2 part process: untracked changes
---(git add)-&gt; staging area --(git commit)--&gt; repository
+So getting files into a repo is a 2 part process: 
+    untracked changes --(git add)-&gt; staging area --(git commit)--&gt; repository
 
-![](git-staging-area.jpg "git-staging-area.jpg")
+![](Git-staging-area.jpg "fig:Git-staging-area.jpg")
 
 
 ## Set up a server side repo (a remote repo)
