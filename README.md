@@ -23,7 +23,8 @@ You are viewing files in the repo via a web-based use interface, but you
 could also download a copy of the repo to your computer.
 
 
-[Start the lab here](Labtext1.md)
+[Start the gitlab version of the lab here](Labtext1.md)
+[Start the github version of the lab here](Labtext-github.md)
 
 For working on this repo:
 
