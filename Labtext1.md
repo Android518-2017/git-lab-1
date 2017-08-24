@@ -24,17 +24,7 @@ met
 The examples in here use gitlab but could easily be swapped for
 github or bitbucket.
 
-### Resources
-
-* If you already know how to use git but can't remember some sequence
-check here [git quick ref](http://wiki.pcampbell.profweb.ca/index.php/Git_quick_ref)
-* This is all command line. If you re having trouble remembering the bash
-command line here are some
-[references](https://drive.google.com/open?id=0B-CHlg81QPjfVU5PSkxYM1hsSEE)
-<http://bit.ly/bashqr>
-
-## Definitions: "local" versus "remote"
-
+### Definitions: "local" versus "remote"
 
 * A __local__ repo is one that is on your computer. It is possible to use git
 only locally, and never even communicate with a server. In that case, you get
@@ -45,9 +35,16 @@ a copy of your local repo to a remote repo, you get a back-up of your files
 on the server and therefore access them any other computer. This also allows
 you to share your repo with other and collaborate.
 
+### Resources
+
+* If you already know how to use git but can't remember some sequence
+check here [git quick ref](http://wiki.pcampbell.profweb.ca/index.php/Git_quick_ref)
+* This is all command line. If you re having trouble remembering the bash
+command line here are some
+[references](https://drive.google.com/open?id=0B-CHlg81QPjfVU5PSkxYM1hsSEE)
+<http://bit.ly/bashqr>
 
 ## Set up a local repo
-
 
 1. Configure your git client side (the repo will exist first locally then
 also remotely).
@@ -311,9 +308,26 @@ untracked changes --(git add)-&gt; staging area --(git commit)--&gt; repository
 
 
 ## Set up a server side repo (a remote repo)
+There are instructions for both github and gitlab here.  
 
+### Using github
+1.  If you don't have a github account create one
+    <https://github.com/join?source=header-home>
+2.  Once you have created your account logon, to create a new Project repo click
+    on the plus sign:
+    (Do NOT create a README nor any other files)
+    ![](github-images/gitlhub-create-repo.png "fig:github-images/gitlhub-create-repo.png  ")
 
-For this exercise we are going to use gitlab.
+3.   If the repo is created properly you will see this;
+    ![](github-images/github-create-repo2.png "fig:github-images/github-create-repo2.png")
+    -   After the first part you had a local repo called planets, now
+        you have an empty repo called planets on the github server
+        effectively you just did this on gitlab:
+        ``` {.bash}
+        mkdir planets;cd planets;git init .
+        ```
+
+### Using gitlab
 
 1.  If you don't have a gitlab account create one
     <https://gitlab.com/users/sign_in>
@@ -333,8 +347,7 @@ For this exercise we are going to use gitlab.
         mkdir planets;cd planets;git init .
         ```
 
-Connect your local repo to your remote repo
--------------------------------------------
+### Connect your local repo to your remote repo
 
 What we need to do to connect them is to tell the local repo to talk to
 a remote repo on github.com. This is called __adding a remote__.
@@ -397,7 +410,11 @@ To https://gitlab.com/campbe13/lab1-using-git.git
  * [new branch]      master -> master
 ```
 
-Now the contents of the local repo are on the remote, reload the page:\
+Now the contents of the local repo are on the remote, reload the page:
+
+github
+![](github-images/github-create-repo5.png "fig:github-images/github-create-repo5.png")
+gitlab
 ![](gitlab-images/gitlab-add-project5.PNG "fig:gitlab-images/gitlab-add-project5.PNG")
 
 Add a README.md, for now just put in some basic text, you can get more
@@ -428,7 +445,7 @@ Reload the page it will show you the README.md
 
 ##  Using your repo from a new computer
 
-*You can do this part from home or from your laptop.*
+*You can do this part from home or from your laptop. It must be on a different computer to the original.*
 
 Again this example uses gitlab but any remote server repo will work
 similarly.
