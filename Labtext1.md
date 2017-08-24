@@ -27,7 +27,7 @@ github or bitbucket.
 ### Resources
 
 * If you already know how to use git but can't remember some sequence
-check here [git quick ref](git_quick_ref "wikilink")
+check here [git quick ref](http://wiki.pcampbell.profweb.ca/index.php/Git_quick_ref)
 * This is all command line. If you re having trouble remembering the bash
 command line here are some
 [references](https://drive.google.com/open?id=0B-CHlg81QPjfVU5PSkxYM1hsSEE)
@@ -319,13 +319,13 @@ For this exercise we are going to use gitlab.
     <https://gitlab.com/users/sign_in>
 2.  Once you have created your account logon, to create a new Project repo click
     on Project Dashboard then New project button:
-    ![](gitlab-add-project.PNG "fig:gitlab-add-project.PNG")
+    ![](gitlab-images/gitlab-add-project.PNG "fig:gitlab-images/gitlab-add-project.PNG")
 3.  Select new repository then fill in the info & click on the green
     button:
-    ![](gitlab-add-project2.PNG "fig:gitlab-add-project2.PNG")
+    ![](gitlab-images/gitlab-add-project2.PNG "fig:gitlab-images/gitlab-add-project2.PNG")
 4.  If the repo is created properly you will see this;
      (Do NOT create a README nor any other files)
-    ![](gitlab-add-project3.PNG "fig:gitlab-add-project3.PNG")
+    ![](gitlab-images/gitlab-add-project3.PNG "fig:gitlab-images/gitlab-add-project3.PNG")
     -   After the first part you had a local repo called planets, now
         you have an empty repo called planets on the github server
         effectively you just did this on gitlab:
@@ -346,7 +346,7 @@ userid/password. So we'll use https for now.
 Note server side == remote && client side == local
 
 From the website copy the https url into your clipboard
-![](gitlab-add-project4.PNG "fig:gitlab-add-project4.PNG")
+![](gitlab-images/gitlab-images/gitlab-images/gitlab-add-project4.PNG "fig:add-project4.PNG")
 
 Go to your local repo directory (git-bash command line)
 
@@ -386,7 +386,7 @@ So this command is saying: take all the commits in history up to the point
 labeled "master" and send them to the remote called "origin"
 
 We need to authenticate on the server:
-![](http-auth-windows.PNG "fig:http-auth-windows.PNG")
+![](gitlab-images/http-auth-windows.PNG "fig:gitlab-images/http-auth-windows.PNG")
 ``` {.bash}
 Counting objects: 3, done.
 Delta compression using up to 4 threads.
@@ -398,7 +398,7 @@ To https://gitlab.com/campbe13/lab1-using-git.git
 ```
 
 Now the contents of the local repo are on the remote, reload the page:\
-![](gitlab-add-project5.PNG "fig:gitlab-add-project5.PNG")
+![](gitlab-images/gitlab-add-project5.PNG "fig:gitlab-images/gitlab-add-project5.PNG")
 
 Add a README.md, for now just put in some basic text, you can get more
 sophisticated later, with markdown
