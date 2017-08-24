@@ -21,8 +21,7 @@ The client is the git command the server is any repo server
 <http://github.com>, <https://bitbucket.org/>, <http://gitlab.com>, or
 one that you host yourself, etc.
 met
-The examples in here use gitlab but could easily be swapped for
-github or bitbucket.
+The examples in here use github and gitlab but could easily be swapped for bitbucket.
 
 ### Definitions: "local" versus "remote"
 
@@ -76,7 +75,7 @@ $ git config --help
 ```
 
 We are going to make an example local repository. Do this on
-the h: drive (from <http://swcarpentry.github.io/git-novice/03-create/>)
+the h: drive (ref <http://swcarpentry.github.io/git-novice/03-create/>)
 
 ``` {.bash}
 $ mkdir planets
@@ -309,20 +308,21 @@ untracked changes --(git add)-&gt; staging area --(git commit)--&gt; repository
 
 ## Set up a server side repo (a remote repo)
 There are instructions for both github and gitlab here.  
-
+For this exercise _ONLY_ your repo is to be __public__
 ### Using github
 1.  If you don't have a github account create one
     <https://github.com/join?source=header-home>
 2.  Once you have created your account logon, to create a new Project repo click
     on the plus sign:
-    (Do NOT create a README nor any other files)
-    ![](github-images/gitlhub-create-repo.png "fig:github-images/gitlhub-create-repo.png  ")
+    _(Do NOT create a README nor any other files)_
+    ![](github-images/github-create-repo.png "fig:github-images/github-create-repo.png  ")
 
 3.   If the repo is created properly you will see this;
     ![](github-images/github-create-repo2.png "fig:github-images/github-create-repo2.png")
     -   After the first part you had a local repo called planets, now
         you have an empty repo called planets on the github server
-        effectively you just did this on gitlab:
+        effectively you just did this on github:
+        
         ``` {.bash}
         mkdir planets;cd planets;git init .
         ```
@@ -343,6 +343,7 @@ There are instructions for both github and gitlab here.
     -   After the first part you had a local repo called planets, now
         you have an empty repo called planets on the github server
         effectively you just did this on gitlab:
+
         ``` {.bash}
         mkdir planets;cd planets;git init .
         ```
