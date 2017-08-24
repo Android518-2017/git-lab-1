@@ -303,8 +303,9 @@ Success!
  1 file changed, 1 insertion(+)
 ```
 
-So getting files into a repo is a 2 part process: 
-    untracked changes --(git add)-&gt; staging area --(git commit)--&gt; repository
+So getting files into a repo is a 2 part process:
+
+untracked changes --(git add)-&gt; staging area --(git commit)--&gt; repository
 
 ![](Git-staging-area.jpg "fig:Git-staging-area.jpg")
 
@@ -532,7 +533,7 @@ To https://github.com/campbe13/planets.git
 
 Now the remote (server) gitlab repo contains my latest changes.
 
-Using your repo back on first computer (in the lab)
+Using your repo back on the first computer (in the lab)
 ---------------------------------------------------
 
 So you committed a change in the repo at home, pushed to your remote, and now
@@ -619,48 +620,4 @@ Writing objects: 100% (4/4), 440 bytes | 0 bytes/s, done.
 Total 4 (delta 0), reused 0 (delta 0)
 To https://gitlab.com/campbe13/planets.git
    c3993b1..f843520  master -> master
-```
-
-##  Simple Collaboration using a git repo
-
-Again this example uses gitlab but any remote server repo will work
-similarly. This is collaboration where both contributors have access.
-
-This is the shared repository model: collaborators have push access to a
-shared repo.
-
-Do this with a partner, each of you act as owner and collaborator, do it
-twice, so that you each contribute to your partner's repo, also create a
-file that is <yourname>.txt:
-Ref <http://swcarpentry.github.io/git-novice/08-collab/>
-
-Note when you do this if you are each using a repo with the same name
-you must do it in a separate directory, do not cross the streams!!!!!
-
-For example:
-
-Mila, logged on at Dawson:
-
-``` {.bash}
- h:\git\planets
-```
-
-Tom, logged on at Dawson:
-
-``` {.bash}
- h:\git\planets
-```
-
-Mila sharing Tom's
-
-``` {.bash}
-cd   h:\git\shared\  
-git clone <Tom's url> # creates h:\git\shared\planets
-```
-
-Tom sharing Mila's
-
-``` {.bash}
-cd h:\sharedstuff\  
-git clone <Mila's url> # creates h:\sharedstuff\planets
 ```
