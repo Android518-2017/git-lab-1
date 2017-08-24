@@ -321,7 +321,8 @@ For this exercise _ONLY_ your repo is to be __public__
     ![](github-images/github-create-repo2.png "fig:github-images/github-create-repo2.png")
     -   After the first part you had a local repo called planets, now
         you have an empty repo called planets on the github server
-        effectively you just did this on gitlab:
+        effectively you just did this on github:
+        
         ``` {.bash}
         mkdir planets;cd planets;git init .
         ```
@@ -342,6 +343,7 @@ For this exercise _ONLY_ your repo is to be __public__
     -   After the first part you had a local repo called planets, now
         you have an empty repo called planets on the github server
         effectively you just did this on gitlab:
+
         ``` {.bash}
         mkdir planets;cd planets;git init .
         ```
