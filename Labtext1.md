@@ -328,7 +328,7 @@ For this exercise _ONLY_ your repo is to be __public__
         ```
 
 ### Using gitlab
-If you have created a repo on github go to [connect remote](#Connect-your-local-repo-to-your-remote-repo)
+If you have created a repo on github go to [connect remote](#connect-your-local-repo-to-your-remote-repo)
 
 1.  If you don't have a gitlab account create one
     <https://gitlab.com/users/sign_in>
