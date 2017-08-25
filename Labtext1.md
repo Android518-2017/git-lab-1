@@ -322,12 +322,13 @@ For this exercise _ONLY_ your repo is to be __public__
     -   After the first part you had a local repo called planets, now
         you have an empty repo called planets on the github server
         effectively you just did this on github:
-        
+
         ``` {.bash}
         mkdir planets;cd planets;git init .
         ```
 
 ### Using gitlab
+If you have created a repo on github go to [connect remote](#Connect-your-local-repo-to-your-remote-repo)
 
 1.  If you don't have a gitlab account create one
     <https://gitlab.com/users/sign_in>
