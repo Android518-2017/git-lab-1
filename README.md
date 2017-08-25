@@ -18,12 +18,14 @@ so if anything goes wrong you swear at yourself.
 
 A second lab will concentrate on collaboration using git.
 
-These instructions are in a git repo hosted on a remote server (gitlab.com). 
+These instructions are in a git repo hosted on a remote server (gitlab.com/github.com). 
 You are viewing files in the repo via a web-based use interface, but you 
 could also download a copy of the repo to your computer.
 
 
 [Start the lab here](Labtext1.md)
+
+![xkcd on git](https://imgs.xkcd.com/comics/git_2x.png)
 
 For working on this repo:
 
@@ -31,5 +33,3 @@ For working on this repo:
 -   [original main on mediawiki](http://wiki.pcampbell.profweb.ca/index.php/Using\_git)
 -   [original lab 1 on mediawiki](http://wiki.pcampbell.profweb.ca/index.php/Introductory\_Git\_Lab)
 -   [differences between github/gitlab/bitbucket](https://about.gitlab.com/2016/01/27/comparing-terms-gitlab-github-bitbucket/)
-
-![xkcd on git](https://imgs.xkcd.com/comics/git_2x.png)
